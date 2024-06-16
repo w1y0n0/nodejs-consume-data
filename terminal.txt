@@ -1,0 +1,58 @@
+### INIT
+
+C:\javascript-projects\nodejs-consume-data>npm init --y
+Wrote to C:\javascript-projects\nodejs-consume-data\package.json:
+
+{
+  "name": "nodejs-consume-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"        
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+### Install dependency Hapi dan Got
+
+C:\javascript-projects\nodejs-consume-data>npm install @hapi/hapi got@11.8.6
+
+added 61 packages, and audited 62 packages in 1m
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+### Running
+
+C:\javascript-projects\nodejs-consume-data>npm run start
+
+> nodejs-consume-data@1.0.0 start
+> SET PORT=3000 && node server.js
+
+Server berjalan pada http://localhost:3000
+
+C:\javascript-projects\nodejs-consume-data>npm run start:order
+
+> nodejs-consume-data@1.0.0 start:order 
+> SET PORT=4000 && node order-service.js
+
+Order service listening on localhost on port: 4000
+
+C:\javascript-projects\nodejs-consume-data>npm run start:user
+
+> nodejs-consume-data@1.0.0 start:user 
+> SET PORT=5000 && node user-service.js
+
+User service listening on localhost on port: 5000
+
+### Testing
+
+Kemudian akses url http://localhost:3000/1. Jika berhasil, hasilnya akan tampil seperti berikut ini.
+{"id":1,"menu":"Mie goreng","user":"Arsy"}
+
+###
